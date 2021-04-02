@@ -1,12 +1,13 @@
-import React from 'react';
-import CategoryDetailErChild from '../CategoryDetailErChild/CategoryDetailErChild';
+import React, { useContext } from 'react';
+import { CategoryContext } from '../../App';
+// import CategoryDetailErChild from '../CategoryDetailErChild/CategoryDetailErChild';
 
 const CategoriesDetail = (props) => {
-    const {count} = props;
+    const category = useContext(CategoryContext);
+    const {name} = props.product;
     return (
         <div>
-            <p>This is category detail: {count}</p>
-            <CategoryDetailErChild />
+            {name}
         </div>
     );
 };
